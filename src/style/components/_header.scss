@@ -1,0 +1,38 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	& a,
+	span {
+		@include rfs(1.25rem, font-size);
+		color: var(--color-secondary);
+	}
+
+	&__nav {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		& .nav__right {
+			display: flex;
+			flex-direction: column;
+
+			@each $media in md,
+			sm {
+				@include media($media) {
+					display: none;
+				}
+			}
+		}
+
+
+		.group {
+			display: grid;
+			grid-template-columns: repeat(2, max-content);
+			grid-gap: 0 1em;
+		}
+
+	}
+}

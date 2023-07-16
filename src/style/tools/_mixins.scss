@@ -1,0 +1,75 @@
+/*******************************************************
+    SCSS
+*******************************************************/
+
+/*============== 01. Media Query ===============*/
+
+$media: (
+  xxl: 1400px,
+  xl: 1200px,
+  lg: 1199.98px,
+  md: 991.98px,
+  sm: 767.98px,
+  mb: 575.98px
+);
+
+
+@mixin media($size) {
+  @if $size ==sm {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @else if $size ==md {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @else if $size ==lg {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+
+  @else if $size ==xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $size ==xxl {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+
+
+/*============== 02. Other ===============*/
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

@@ -1,0 +1,106 @@
+.main {
+	&__start {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 90vh;
+
+		clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+	}
+
+	&__about {
+		display: flex;
+		flex-direction: column;
+		grid-gap: 1em;
+
+		& p {
+			@include rfs(2.5rem, font-size);
+		}
+
+		& a {
+			@include rfs(1.5625rem, font-size);
+			color: var(--color-secondary);
+			width: max-content;
+
+			&:hover::after {
+				width: 100%;
+				transition: width 0.3s ease-in-out;
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				width: 50%;
+				height: 2px;
+				background: var(--color-tertiary);
+				transition: width 0.3s ease-in-out;
+			}
+		}
+	}
+
+	&__works {
+		& p {
+			@include rfs(2.5rem, font-size);
+		}
+
+		& .works__list {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 5em 2em;
+
+			@each $media in md,
+			sm {
+				@include media($media) {
+					grid-template-columns: repeat(1, minmax(200px, 1fr));
+				}
+			}
+
+			& .list__item {
+
+				display: flex;
+				flex-direction: column;
+				grid-gap: 10px 0;
+
+				& .item__img {
+					overflow: hidden;
+					border-radius: 10px;
+					display: flex;
+
+					& a {
+						width: 100%;
+
+						& img {
+							width: 100%;
+							height: 70vh;
+							border-radius: 10px;
+							object-fit: cover;
+
+							@each $media in md,
+							sm {
+								@include media($media) {
+									height: 50vh;
+								}
+							}
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+					}
+
+
+				}
+
+
+				& h3 {
+					@include rfs(2.5rem, font-size);
+					color: var(--color-secondary);
+				}
+
+				& p {
+					@include rfs(1.5625rem, font-size);
+				}
+			}
+		}
+	}
+}

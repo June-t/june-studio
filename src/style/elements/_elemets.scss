@@ -1,0 +1,31 @@
+h1 {
+	@include rfs(6.25rem, font-size);
+	font-weight: var(--weight-regular);
+	color: var(--color-secondary);
+}
+
+p {
+	color: var(--color-tertiary);
+
+	& b {
+		color: var(--color-secondary);
+	}
+}
+
+.line {
+	bottom: 0;
+	@include size(100%, 2px);
+	margin: 5px 0;
+	background: var(--color-tertiary);
+}
+
+.space {
+	@include rfs(25vh, height);
+
+	@each $media in md,
+	sm {
+		@include media($media) {
+			@include rfs(15vh, height);
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.template {
+	padding: 1em 4em;
+
+	@each $media in md,
+	sm {
+		@include media($media) {
+			padding: 1em 1em;
+		}
+	}
+}
