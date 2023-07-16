@@ -1,3 +1,4 @@
+/*
 interface DataInterface {
   header: Array<Array<string>>
   about: {
@@ -21,13 +22,18 @@ interface DataInterface {
       resumen: string
     }
     stack: {
-      frontend: { key: string; value: string }[]
-      backend: { key: string; value: string }[]
+      frontend: {
+        [key: string]: string
+      }
+      backend: {
+        [key: string]: string
+      }
     }
   }
 }
+ */
 
-const data: DataInterface = {
+const data = {
   header: [
     ['Index', '#main'],
     ['Works', '#works'],
@@ -52,10 +58,10 @@ const data: DataInterface = {
 
   collaborate: {
     socials: {
-      email: 'mailto:yunedor123@gmail.com',
-      linkedin: 'https://www.linkedin.com/in/june-tk/',
-      github: 'https://github.com/June-t',
-      resumen:
+      Email: 'mailto:yunedor123@gmail.com',
+      Linkedin: 'https://www.linkedin.com/in/june-tk/',
+      Github: 'https://github.com/June-t',
+      Resume:
         'https://drive.google.com/file/d/1bUzAJYmMxnOayzDVjtofk14NJktbnUmv/view?usp=sharing',
     },
     stack: {
