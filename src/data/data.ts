@@ -50,8 +50,14 @@ const data = {
       {
         name: 'Nasty Haiko',
         description: 'A website focused on showing the work of a model',
-        image: '/img/proyects/Laptop_Mockup-min.jpg',
+        image: '/img/proyects/bg-nasty.jpg',
         link: 'https://melodic-wisp-e54b80.netlify.app/',
+      },
+      {
+        name: 'Portfolio',
+        description: 'Portfolio of a web developer',
+        image: '/img/proyects/bg-june.studio.jpg',
+        link: 'https://www.june-t.studio/',
       },
     ],
   },
