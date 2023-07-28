@@ -59,6 +59,13 @@ const data = {
         image: '/img/proyects/bg-june.studio.jpg',
         link: 'https://www.june-t.studio/',
       },
+      {
+        name: 'Museum',
+        description:
+          'Site dedicated to exploring pieces of art with a search engine',
+        image: '/img/proyects/bg-museum.jpg',
+        link: 'https://museum-henna.vercel.app/',
+      },
     ],
   },
 
