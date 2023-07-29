@@ -54,6 +54,30 @@ $media: (
   height: $height;
 }
 
+%effect__link {
+  width: max-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    width: 0%;
+    height: 1px;
+    display: block;
+    background: var(--color-secondary);
+    position: absolute;
+    transition: all ease-in 0.2s;
+  }
+
+  &:hover::before {
+    width: 100%;
+    transition: all ease-in 0.2s;
+  }
+}
+
+
+
 html.lenis {
   height: auto;
 }

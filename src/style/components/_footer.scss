@@ -64,6 +64,8 @@
 				color: var(--color-secondary);
 				@include rfs(1.25rem, font-size);
 				padding: 5px 0;
+
+				@extend %effect__link;
 			}
 		}
 	}

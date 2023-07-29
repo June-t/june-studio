@@ -1,39 +1,46 @@
-/*
-interface DataInterface {
-  header: Array<Array<string>>
+interface Project {
+  name: string
+  description: string
+  image: string
+  link: string
+}
+
+interface CollaborateSocials {
+  Email: string
+  Linkedin: string
+  Github: string
+  Resume: string
+}
+
+interface FrontendStack {
+  [key: string]: string
+}
+
+interface BackendStack {
+  [key: string]: string
+}
+
+interface Collaborate {
+  socials: CollaborateSocials
+  stack: {
+    frontend: FrontendStack
+    backend: BackendStack
+  }
+}
+
+interface Data {
+  header: string[][]
   about: {
     description: string
   }
   works: {
     description: string
-    projects: Array<{
-      name: string
-      description: string
-      image: string
-      link: string
-    }>
+    projects: Project[]
   }
-  collaborate: {
-    description: string
-    socials: {
-      email: string
-      linkedin: string
-      github: string
-      resumen: string
-    }
-    stack: {
-      frontend: {
-        [key: string]: string
-      }
-      backend: {
-        [key: string]: string
-      }
-    }
-  }
+  collaborate: Collaborate
 }
- */
 
-const data = {
+const data: Data = {
   header: [
     ['Index', '#main'],
     ['Works', '#works'],
@@ -75,7 +82,7 @@ const data = {
       Linkedin: 'https://www.linkedin.com/in/june-tk/',
       Github: 'https://github.com/June-t',
       Resume:
-        'https://drive.google.com/file/d/1bUzAJYmMxnOayzDVjtofk14NJktbnUmv/view?usp=sharing',
+        'https://drive.google.com/file/d/1VzJuKlpkV5nPuoMtOx9J5EECf5t-IjBN/view?usp=sharing',
     },
     stack: {
       frontend: {
