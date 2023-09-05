@@ -73,6 +73,13 @@ const data: Data = {
         image: '/img/proyects/bg-museum.jpg',
         link: 'https://museum-henna.vercel.app/',
       },
+      {
+        name: 'Animation Lab',
+        description:
+          "This is a project created to show designs I've seen from artists and try to create them",
+        image: '/img/proyects/bg-animation.lab.jpg',
+        link: 'https://animation-lab.vercel.app/',
+      },
     ],
   },
 
