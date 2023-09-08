@@ -10,12 +10,6 @@ export default function Home({ setAbout, setWorks }) {
       <div id="about" className="main__about">
         <h1>Hello There</h1>
         <p dangerouslySetInnerHTML={{ __html: setAbout.description }}></p>
-        <a
-          href="https://drive.google.com/file/d/1bUzAJYmMxnOayzDVjtofk14NJktbnUmv/view?usp=sharing"
-          target="_blank"
-        >
-          See more
-        </a>
       </div>
       <div className="space"></div>
       <div id="works" className="main__works">

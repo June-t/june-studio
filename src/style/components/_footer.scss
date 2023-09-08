@@ -1,10 +1,9 @@
 /* En línea #1 | http://localhost:5173/ */
 
 .footer {
-	height: 100vh;
+	height: 80vh;
 	display: grid;
 	grid-template: "top" "midle" "down" max-content;
-	grid-gap: 2em 0;
 
 	&__top {
 		display: flex;
