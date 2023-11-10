@@ -3,9 +3,6 @@ import Lenis from '@studio-freight/lenis'
 const lenis = new Lenis({
   duration: 2,
   easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-  direction: 'vertical',
-  gestureDirection: 'vertical',
-  smooth: true,
   smoothTouch: false,
   touchMultiplier: 2,
 })
