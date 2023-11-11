@@ -5,6 +5,13 @@
 	display: grid;
 	grid-template: "top" "midle" "down" max-content;
 
+	@each $media in md, sm, mb {
+		@include media($media) {
+			height: 100%;
+			grid-gap: 2em;
+		}
+	}
+
 	&__top {
 		display: flex;
 		flex-direction: column;
@@ -16,6 +23,12 @@
 			display: flex;
 			justify-content: space-between;
 			position: relative;
+
+			@each $media in md, sm, mb {
+				@include media($media) {
+					font-weight: var(--weight-medium);
+				}
+			}
 
 			& span {
 				position: absolute;
@@ -78,6 +91,12 @@
 
 		& span {
 			@include rfs(1.25rem, font-size);
+
+			@each $media in md, sm, mb {
+				@include media($media) {
+					@include rfs(1.125rem, font-size);
+				}
+			}
 		}
 	}
 

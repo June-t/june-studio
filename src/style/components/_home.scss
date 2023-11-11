@@ -15,7 +15,14 @@
 
 		& p {
 			@include rfs(3.125rem, font-size);
+
+			@each $media in md, sm, mb {
+				@include media($media) {
+					@include rfs(2.125rem, font-size);
+				}
+			}
 		}
+
 
 		& a {
 			@include rfs(1.5625rem, font-size);
@@ -41,17 +48,22 @@
 	&__works {
 		& p {
 			@include rfs(3.125rem, font-size);
+
+			@each $media in md, sm, mb {
+				@include media($media) {
+					@include rfs(2.125rem, font-size);
+				}
+			}
 		}
 
 		& .works__list {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
 			grid-gap: 5em 2em;
 
-			@each $media in md,
-			sm {
+			@each $media in md, sm, mb {
 				@include media($media) {
-					grid-template-columns: repeat(1, minmax(200px, 1fr));
+					grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 				}
 			}
 
@@ -78,7 +90,7 @@
 							@each $media in md,
 							sm {
 								@include media($media) {
-									height: 50vh;
+									height: 100%;
 								}
 							}
 
@@ -95,6 +107,12 @@
 				& h3 {
 					@include rfs(2.5rem, font-size);
 					color: var(--color-secondary);
+
+					@each $media in md, sm, mb {
+						@include media($media) {
+							@include rfs(3.75rem, font-size);
+						}
+					}
 				}
 
 				& p {

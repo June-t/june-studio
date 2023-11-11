@@ -20,8 +20,22 @@ export default function Home({ setAbout, setWorks }) {
           {setWorks.projects.map((project, index) => (
             <div className="list__item" key={index}>
               <div className="item__img">
-                <a href={project.link} target="_blank">
-                  <img src={project.image} alt={project.name} />
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <picture>
+                    <source
+                      srcSet={`${project.image} 2x`}
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      loading="lazy"
+                    />
+                  </picture>
                 </a>
               </div>
               <h3>{project.name}</h3>
