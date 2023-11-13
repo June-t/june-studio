@@ -8,6 +8,7 @@ interface Project {
 interface CollaborateSocials {
   Email: string
   Linkedin: string
+  Instagram: string
   Github: string
   Resume: string
 }
@@ -87,6 +88,7 @@ const data: Data = {
     socials: {
       Email: 'mailto:yunedor123@gmail.com',
       Linkedin: 'https://www.linkedin.com/in/june-tk/',
+      Instagram: 'https://www.instagram.com/junestudio.s',
       Github: 'https://github.com/June-t',
       Resume:
         'https://drive.google.com/file/d/1VzJuKlpkV5nPuoMtOx9J5EECf5t-IjBN/view?usp=sharing',
