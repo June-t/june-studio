@@ -6,7 +6,9 @@ export default function Footer({ footerSocial, footerStack }) {
     <footer id="collaborate" className="footer">
       <div className="footer__top">
         <h1>
-          Let's <br /> Collaborate!
+          Vamos a
+          <br />
+          ¡Colaborar!
           <span>
             <svg
               width="262.14453px"
@@ -26,8 +28,8 @@ export default function Footer({ footerSocial, footerStack }) {
           </span>
         </h1>
         <h3>
-          Reach out about a project,
-          <br /> collaboration or just to say hello!
+          Hablame sobre un proyecto,
+          <br /> colaboración o simplemente para saludar!
         </h3>
       </div>
       <div className="footer__midle">
@@ -64,10 +66,9 @@ export default function Footer({ footerSocial, footerStack }) {
       </div>
       <div className="footer__down">
         <hr className="line" />
-        <span>© 2023 - All rights reserved</span>
         <span>
-          Made by me with <span>💜 </span>
-          thanks you for visiting
+          © 2024 - Hecho por mi con <span>💜 </span>
+          gracias por visitar!
         </span>
       </div>
     </footer>

@@ -44,40 +44,39 @@ interface Data {
 const data: Data = {
   header: [
     ['Index', '#main'],
-    ['Works', '#works'],
-    ['About', '#about'],
-    ['Collaborate', '#collaborate'],
+    ['Proyectos', '#works'],
+    ['Acerca', '#about'],
+    ['¡Colaboremos!', '#collaborate'],
   ],
   about: {
     description:
-      'My name is <b>Alexander Crespo</b>, I was born on September 12, 2001 in Maracay. I have been passionate about technology since my teens, with a strong desire to shape ideas with dedication and passion',
+      'Mi nombre es <b>Alexander Crespo</b>, nací el 12 de septiembre de 2001 en Maracay. Me apasiona la tecnología desde mi adolescencia, con un fuerte deseo de dar forma a ideas con dedicación y pasión.',
   },
   works: {
-    description: 'Here you can see some of my projects that i have done',
+    description: 'Aquí puedes ver algunos de mis proyectos que he realizado.',
     projects: [
       {
         name: 'Nasty Haiko',
-        description: 'A website focused on showing the work of a model',
+        description: 'Una web enfocada a mostrar el trabajo de una modelo',
         image: '/img/proyects/bg-nasty.jpg',
         link: 'https://melodic-wisp-e54b80.netlify.app/',
       },
       {
         name: 'Portfolio',
-        description: 'Portfolio of a web developer',
+        description: 'Portafolio',
         image: '/img/proyects/bg-june.studio.jpg',
         link: 'https://www.june-t.studio/',
       },
       {
         name: 'Museum',
-        description:
-          'Site dedicated to exploring pieces of art with a search engine',
+        description: 'Sitio dedicado a explorar obras de arte con un buscador',
         image: '/img/proyects/bg-museum.jpg',
         link: 'https://museum-henna.vercel.app/',
       },
       {
         name: 'Animation Lab',
         description:
-          "This is a project created to show designs I've seen from artists and try to create them",
+          'Este es un proyecto creado para mostrar diseños que he visto de artistas e intentar crearlos.',
         image: '/img/proyects/bg-animation.lab.jpg',
         link: 'https://animation-lab.vercel.app/',
       },
